@@ -1,0 +1,20 @@
+= RxJava Demo App
+
+This app retrieves github user information (user info, followers and repositories).
+
+The main goal is to illustrate how to use rjxava and how to parallelize tasks.
+
+The app is still a work in progress and is not completely "reactive".
+
+== Stack
+
+- spring-boot 1.2.6
+- java 8
+- rxjava
+
+== Example
+
+- `mvn test spring-boot:run`
+- `curl http://localhost:8080/github/users/ojacquemart`
+
+In the logs, you will notice that the 3 http requests are launched at the exact same time.
