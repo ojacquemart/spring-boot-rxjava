@@ -24,6 +24,8 @@
 
         <rxjava.version>1.0.10</rxjava.version>
         <lombok.version>1.16.6</lombok.version>
+
+        <assertj-core.version>3.2.0</assertj-core.version>
     </properties>
 
 	<dependencies>
@@ -53,6 +55,13 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>${assertj-core.version}</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 	
 	<build>
