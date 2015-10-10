@@ -14,7 +14,15 @@ public class RestClient {
     public static final String API_GITHUB_FOLLOWERS = API_GITHUB_USERS + "/followers";
     public static final String API_GITHUB_REPOS = API_GITHUB_USERS + "/repos";
 
-    private RestTemplate restTemplate = new RestTemplate();
+    private final RestTemplate restTemplate;
+
+    public RestClient() {
+        this(new RestTemplate());
+    }
+
+    public RestClient(RestTemplate restTemplate) {
+        this.restTemplate = restTemplate;
+    }
 
     public RawUser getUser(String login) {
         log.info("Get user {}", login);
