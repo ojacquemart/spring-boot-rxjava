@@ -15,7 +15,15 @@ import java.util.Arrays;
 @Service
 public class GithubService {
 
-    private RestClient restClient = new RestClient();
+    private RestClient restClient;
+
+    public GithubService() {
+        this(new RestClient());
+    }
+
+    public GithubService(RestClient restClient) {
+        this.restClient = restClient;
+    }
 
     public GithubUser getUser(String login) {
         Observable<RawUser> getRawUser = getRawUserObservable(login);

@@ -9,7 +9,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = ReactiveGithubApp.class)
 @WebAppConfiguration
-public class RxJavaDemoApplicationTests {
+public class ReactiveGithubAppTests {
 
 	@Test
 	public void contextLoads() {
